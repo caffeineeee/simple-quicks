@@ -33,9 +33,9 @@ const OtherChatBubble: FC<OtherChatBubbleProps> = (props) => {
 export default OtherChatBubble;
 
 const cssNameColor = (color: string) => css`
-  color: ${ color } !important;
+  color: ${color} !important;
 `;
 
 const cssBackgroundColor = (backgroundColor: string) => css`
-  background-color: ${ backgroundColor } !important;
+  background-color: ${backgroundColor} !important;
 `;
