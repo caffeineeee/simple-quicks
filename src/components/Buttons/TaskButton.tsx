@@ -16,20 +16,24 @@ export function TaskButton(props: TaskButtonProps) {
   if (isActive) {
 
     return (
-      <div className="relative w-[68px] h-[68px] cursor-pointer">
-        <div className="absolute rounded-full w-[68px] h-[68px] bg-[#4F4F4F] z-0 top-0 left-[-12px]"></div>
-        <div className="w-[68px] h-[68px] bg-[#F8B76B] rounded-full flex items-center justify-center z-20 absolute"
-          onClick={() => setActiveMenu('idle')}
-        >
-          <Image
-            src={'/icons/chrome-reader-mode-white.svg'}
-            width={30}
-            height={30}
-            style={{ objectFit: 'contain' }}
-            alt="chrome reader mode"
-          />
+      <>
+        <div className="relative w-[68px] h-[68px] cursor-pointer">
+          <div className="absolute rounded-full w-[68px] h-[68px] bg-[#4F4F4F] z-0 top-0 left-[-12px]"></div>
+          <div className="w-[68px] h-[68px] bg-[#F8B76B] rounded-full flex items-center justify-center z-20 absolute"
+            onClick={() => {
+              setActiveMenu('idle');
+            }}
+          >
+            <Image
+              src={'/icons/chrome-reader-mode-white.svg'}
+              width={30}
+              height={30}
+              style={{ objectFit: 'contain' }}
+              alt="chrome reader mode"
+            />
+          </div>
         </div>
-      </div>
+      </>
     );
   }
   else {

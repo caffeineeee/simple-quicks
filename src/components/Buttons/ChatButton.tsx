@@ -17,21 +17,24 @@ export function ChatButton(props: ChatButtonProps) {
   if (isActive) {
 
     return (
-      <div className="relative w-[68px] h-[68px] cursor-pointer">
-        <div className="absolute rounded-full w-[68px] h-[68px] bg-[#4F4F4F] z-0 top-0 left-[-12px]"></div>
-        <div className="w-[68px] h-[68px] bg-[#8785FF] rounded-full flex items-center justify-center z-20 absolute"
-          onClick={() => setActiveMenu('idle')}
-
-        >
-          <Image
-            src={'/icons/question-answer-white.svg'}
-            width={30}
-            height={30}
-            style={{ objectFit: 'contain' }}
-            alt="question answer"
-          />
+      <>
+        <div className="relative w-[68px] h-[68px] cursor-pointer">
+          <div className="absolute rounded-full w-[68px] h-[68px] bg-[#4F4F4F] z-0 top-0 left-[-12px]"></div>
+          <div className="w-[68px] h-[68px] bg-[#8785FF] rounded-full flex items-center justify-center z-20 absolute"
+            onClick={() => {
+              setActiveMenu('idle');
+            }}
+          >
+            <Image
+              src={'/icons/question-answer-white.svg'}
+              width={30}
+              height={30}
+              style={{ objectFit: 'contain' }}
+              alt="question answer"
+            />
+          </div>
         </div>
-      </div>
+      </>
     );
   }
   else {
