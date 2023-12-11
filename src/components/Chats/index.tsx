@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import { useChatStore } from '@/hooks/ChatStore';
 import { ChatList } from '@/components/Chats/ChatList/';
@@ -9,7 +9,7 @@ import { GroupChatDetail } from '@/components/Chats/ChatDetail/GroupChatDetail';
 export function ChatBox() {
   const chatStore = useChatStore();
   return (
-    <div className='absolute h-[500px] w-[602px] bottom-[80px] border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-[20px]'>
+    <div className='absolute h-[734px] w-[737px] bottom-[80px] border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-[20px]'>
       <div className="w-full h-full flex flex-col">{renderChatBoxContent(chatStore.currentPage)}</div>
     </div>
   );
