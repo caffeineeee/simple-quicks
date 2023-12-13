@@ -11,12 +11,12 @@ import { SingleChat } from './SingleChatList';
 
 export function ChatList() {
   const chatStore = useChatStore();
-  const [filteredChatList, setFilteredChatList] = useState<ChatListType>(DUMMMY_CHAT_LIST_DATA);
+  const [filteredChatList, setFilteredChatList] = useState<ChatListType>(DUMMY_CHAT_LIST_DATA);
 
   function onSearch(searchValue: string) {
-    if (searchValue.length < 1) setFilteredChatList(DUMMMY_CHAT_LIST_DATA);
+    if (searchValue.length < 1) setFilteredChatList(DUMMY_CHAT_LIST_DATA);
     else {
-      let result = DUMMMY_CHAT_LIST_DATA.filter((data) =>
+      let result = DUMMY_CHAT_LIST_DATA.filter((data) =>
         data.title?.toLowerCase().includes(searchValue.toLowerCase()),
       );
       setFilteredChatList(result);
@@ -68,7 +68,7 @@ type ChatListData = {
 
 type ChatListType = ChatListData[];
 
-const DUMMMY_CHAT_LIST_DATA: ChatListType = [
+const DUMMY_CHAT_LIST_DATA: ChatListType = [
   {
     title: '109220-Naturalization',
     date: 'January 1,2021 19:10',

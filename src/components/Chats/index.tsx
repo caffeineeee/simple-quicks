@@ -9,7 +9,7 @@ import { GroupChatDetail } from '@/components/Chats/ChatDetail/GroupChatDetail';
 export function ChatBox() {
   const chatStore = useChatStore();
   return (
-    <div className='absolute h-[734px] w-[737px] bottom-[80px] border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-[20px]'>
+    <div className='absolute h-[734px] w-[737px] bottom-20 border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-5'>
       <div className="w-full h-full flex flex-col">{renderChatBoxContent(chatStore.currentPage)}</div>
     </div>
   );
