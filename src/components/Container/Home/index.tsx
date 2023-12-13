@@ -18,7 +18,7 @@ export function Home() {
   return (
     <div className='w-full h-full min-h-screen bg-[#262626] relative [transition:all]'>
       <div
-        className={cn("absolute right-[34px] bottom-[12px] flex gap-[26px] items-end", activeMenu === "task" ? "flex-row" : "flex-row-reverse")}
+        className={cn("absolute right-[34px] bottom-1 flex gap-[26px] items-end", activeMenu === "task" ? "flex-row" : "flex-row-reverse")}
         onClick={() => setIsShowMenu(!isShowMenu)}
       >
         {activeMenu === 'chat' && (

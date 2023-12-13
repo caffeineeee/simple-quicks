@@ -2,12 +2,15 @@
 
 import React, { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { TextField } from "@radix-ui/themes";
 
 import { TextInput } from '@/components/Inputs/TextInput';
+import { Input } from "@/components/ui/input";
 import { useChatStore } from '@/hooks/ChatStore';
 
 import { GroupChatList } from './GroupChatList';
 import { SingleChat } from './SingleChatList';
+import Image from 'next/image';
 
 export function ChatList() {
   const chatStore = useChatStore();
@@ -27,11 +30,37 @@ export function ChatList() {
   return (
     <>
       <div className='w-[95%] mb-[2px] text-2xl'>
-        <TextInput
+        {/* <TextInput
           suffix={<AiOutlineSearch width={12} height={12} />}
           placeholder="Search"
           onChange={(event: { target: { value: string; }; }) => onSearch(String(event.target.value))}
-        />
+          className='w-full'
+          autoFocus
+        /> */}
+        {/* <Input /> */}
+        <TextField.Root className='border-2 rounded-lg border-[#828282] text-base w-[666px]'>
+          <div className='flex flex-row items-center pl-[1.8px] pr-[59px]'>
+            <TextField.Input
+              placeholder="Search"
+              className='h-8 w-full pl-[59px]'
+            />
+            <TextField.Slot>
+              <Image
+                src="/icons/search.svg"
+                width={12}
+                height={12}
+                style={{ objectFit: 'contain' }}
+                alt="search"
+                className=''
+              />
+            </TextField.Slot>
+
+          </div>
+        </TextField.Root>
+
+
+
+
       </div>
       {filteredChatList.map((data: ChatListData, idx) => {
         if (data.latestChatName) {

@@ -21,7 +21,7 @@ export function OtherChatBubble(props: OtherChatBubbleProps) {
       <div className="flex gap-2 items-start">
         <div
 
-          className={cn("flex flex-col gap-2 items-start justify-center p-3 rounded-[5px] bg-[#FCEED3] h-[max-content]  max-w-[400px] flex-wrap", bgColor)}
+          className={cn("flex flex-col gap-2 items-start justify-center p-3 rounded-[5px] bg-[#FCEED3] h-max  max-w-[400px] flex-wrap", bgColor)}
         >
 
           <span className="font-light text-[#4F4F4F] text-sm">{text}</span>
@@ -66,7 +66,7 @@ export function OwnChatBubble(props: OwnChatBubbleProps) {
 
 function ChatMenu() {
   return (
-    <div className="flex flex-col w-[126px] h-[max-content] rounded-[4px] bg-white border-solid border-[0.5px] border-[#BDBDBD] absolute left-0  z-20">
+    <div className="flex flex-col w-[126px] h-max rounded-[4px] bg-white border-solid border-[0.5px] border-[#BDBDBD] absolute left-0  z-20">
       <div className="px-[16px] py-[12px] text-[#2F80ED] text-sm  border-solid border-[#BDBDBD] border-b-[1px] border-x-0 border-t-0 cursor-pointer">
         Edit
       </div>

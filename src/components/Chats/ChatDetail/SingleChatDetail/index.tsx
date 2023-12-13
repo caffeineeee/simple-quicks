@@ -16,7 +16,7 @@ export function SingleChatDetail() {
               <AiOutlineArrowLeft width={16} height={16} />
             </div>
             <div className="flex flex-col gap-1">
-              <h4 className="text-[#2f80ed] text-[16px] font-semibold">FastVisa Support</h4>
+              <h4 className="text-[#2f80ed] text-sm font-semibold">FastVisa Support</h4>
             </div>
           </div>
           <div className="cursor-pointer hover:scale-105" onClick={() => chatStore.onBack()}>
@@ -38,7 +38,7 @@ export function SingleChatDetail() {
         <div className="w-[83%] mr-3">
           <TextInput placeholder="Type a new message" />
         </div>
-        <button className="flex items-center justify-center text-[#ffffff] bg-[#2f80ed] rounded-[5px] px-[16px] py-[8px] border-[none]">Send</button>
+        <button className="flex items-center justify-center text-[#ffffff] bg-[#2f80ed] rounded-[5px] px-[16px] py-[8px] border-none">Send</button>
       </div>
     </div>
   );

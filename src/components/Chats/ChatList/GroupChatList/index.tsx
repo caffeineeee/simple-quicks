@@ -19,10 +19,10 @@ export function GroupChatList(props: GroupChatListProps) {
       <div className="flex gap-[16px]">
         <GroupIcon />
         <div className="flex flex-col gap-[4px]">
-          <h4 className="text-[#2f80ed] text-[14px] font-semibold max-w-[360px]">{title}</h4>
+          <h4 className="text-[#2f80ed] text-sm font-semibold max-w-[360px]">{title}</h4>
           <div className="flex flex-col gap-1">
-            <h5 className="text-[#4f4f4f] text-[12px] font-medium">{latestChatName}</h5>
-            <span className="text-[#4f4f4f] text-[10px] font-normal">{latestChatText}</span>
+            <h5 className="text-[#4f4f4f] text-sm font-medium">{latestChatName}</h5>
+            <span className="text-[#4f4f4f] text-sm font-normal">{latestChatText}</span>
           </div>
         </div>
         <span className="text-xs text-[#4F4F4F]">{date}</span>

@@ -18,7 +18,7 @@ export function GroupChatDetail() {
             <AiOutlineArrowLeft width={16} height={16} />
           </div>
           <div className="flex flex-col gap-1">
-            <h4 className="text-[#2f80ed] text-[16px] font-semibold">
+            <h4 className="text-[#2f80ed] text-sm font-semibold">
               I - 589 - AMARKHIL, Obaidullah [Affirmative Filing with ZHN]
             </h4>
             <span className="text-[#333333] text-[10px]">3 Participants</span>

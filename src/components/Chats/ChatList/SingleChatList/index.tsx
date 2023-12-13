@@ -20,8 +20,8 @@ export function SingleChat(props: SingleChatProps) {
       <div className="flex gap-[16px]">
         <SingleChatIcon />
         <div className="flex flex-col gap-[4px]">
-          <h4 className="text-[#2f80ed] text-[14px] font-semibold max-w-[360px]">{title}</h4>
-          <span className="text-[#4f4f4f] text-[10px] font-normal">{latestChatText}</span>
+          <h4 className="text-[#2f80ed] text-sm font-semibold max-w-[360px]">{title}</h4>
+          <span className="text-[#4f4f4f] text-sm font-normal">{latestChatText}</span>
         </div>
         <span className="text-xs text-[#4F4F4F]">{date}</span>
       </div>
@@ -32,7 +32,7 @@ export function SingleChat(props: SingleChatProps) {
 function SingleChatIcon() {
   return (
     <div className="flex items-center justify-center bg-[#2F80ED] w-[34px] h-[34px] rounded-full">
-      <h3 className="text-sm font-bold text-white">F</h3>
+      <h3 className="text-xs font-bold text-white">F</h3>
     </div>
   );
 }

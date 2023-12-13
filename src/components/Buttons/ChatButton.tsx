@@ -10,7 +10,6 @@ interface BaseChatButtonProps {
 
 type ChatButtonProps = BaseButtonProps & BaseChatButtonProps;
 
-
 export function ChatButton(props: ChatButtonProps) {
   const { onClick, isActive = false, setActiveMenu } = props;
 
@@ -40,7 +39,7 @@ export function ChatButton(props: ChatButtonProps) {
   else {
     return (
       <div className="w-[60px] h-full cursor-pointer mb-2 flex flex-col gap-3 items-center justify-center">
-        <span className="font-bold text-white text-base">Inbox</span>
+        <span className="font-bold text-white text-sm">Inbox</span>
         <div
           className="w-[60px] h-[60px] bg-white rounded-full flex items-center justify-center"
           onClick={() => onClick()}
