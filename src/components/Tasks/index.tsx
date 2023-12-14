@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from '@/lib/utils';
 import { DUMMY_TASKS_DATA } from './data';
+import { latoBold } from '@/app/layout';
 
 type ValuePiece = Date | null;
 
@@ -98,7 +99,7 @@ export function TaskBox() {
 
 
                                         <p
-                                            className={cn('ml-[22px] w-[335.37px] text-sm flex-grow', taskStates[idx].isTaskDone ? "line-through text-[#828282]" : "text-[#4F4F4F]")}
+                                            className={cn('ml-[22px] w-[335.37px] text-sm flex-grow', taskStates[idx].isTaskDone ? "line-through text-[#828282]" : "text-[#4F4F4F]", latoBold.className)}
                                         >
                                             {data.title}
                                         </p>

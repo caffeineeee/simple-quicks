@@ -7,7 +7,7 @@ import { TextField } from "@radix-ui/themes";
 import { ChatsData, DUMMY_CHATS_DATA } from './data';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-
+import { latoBold } from '@/app/layout';
 
 export function ChatBox() {
     const [searchValue, setSearchValue] = useState('');
@@ -112,7 +112,7 @@ export function ChatBox() {
 
                                             <div className='flex flex-row items-start col-span-11'>
                                                 <p
-                                                    className='ml-2 w-[335.37px] text-lg flex-grow font-semibold text-[#2F80ED] leading-tight'
+                                                    className={cn('ml-2 w-[335.37px] text-lg flex-grow font-semibold text-[#2F80ED] leading-tight', latoBold.className)}
                                                 >
                                                     {data.title}
                                                 </p>
@@ -122,7 +122,7 @@ export function ChatBox() {
 
                                         <div className='grid grid-cols-12 gap-2'>
                                             <div className='ml-2 col-start-2 col-span-11 leading-tight'>
-                                                <p className={cn('font-semibold text-[#4F4F4F]', data.lastMessageFrom ? "" : "hidden")}>{data.lastMessageFrom}:</p>
+                                                <p className={cn('font-semibold text-[#4F4F4F]', data.lastMessageFrom ? "" : "hidden", latoBold.className)}>{data.lastMessageFrom}:</p>
                                                 <p className='line-clamp-1'>{data.lastMessage}</p>
                                             </div>
                                         </div>
