@@ -16,9 +16,9 @@ export function Home() {
   const [activeMenu, setActiveMenu] = useState<ActiveMenuType>('idle');
 
   return (
-    <div className='w-full h-full min-h-screen bg-[#262626] relative [transition:all]'>
+    <div className='flex flex-col w-full h-full min-h-screen bg-[#262626] [transition:all] relative'>
       <div
-        className={cn("absolute right-[34px] bottom-1 flex gap-[26px] items-end", activeMenu === "task" ? "flex-row" : "flex-row-reverse")}
+        className='absolute right-[34px] bottom-1 gap-[26px]'
         onClick={() => setIsShowMenu(!isShowMenu)}
       >
         {activeMenu === 'chat' && (
@@ -45,9 +45,13 @@ export function Home() {
             />
           </div>
         )}
+      </div>
 
+      <div
+        className={cn("flex", activeMenu === "task" ? "flex-row" : "flex-row-reverse")}
+      >
         <div
-          className={cn("", isShowMenu ? "[display:inherit]" : activeMenu === "idle" ? "hidden" : "[display:inherit]")}
+          className={cn("absolute bottom-0", isShowMenu && "hidden", activeMenu === "idle" ? "right-[128px]" : activeMenu === "task" ? "right-[128px]" : "right-[34px]")}
         >
           <ChatButton
             setActiveMenu={setActiveMenu}
@@ -59,7 +63,7 @@ export function Home() {
         </div>
 
         <div
-          className={cn("", isShowMenu ? "[display:inherit]" : activeMenu === "idle" ? "hidden" : "[display:inherit]")}
+          className={cn("absolute bottom-0", isShowMenu && "hidden", activeMenu === "idle" ? "right-[214px]" : activeMenu === "chat" ? "right-[128px]" : "right-[34px]")}
         >
           <TaskButton
             setActiveMenu={setActiveMenu}
@@ -69,8 +73,8 @@ export function Home() {
             isActive={activeMenu === 'task'}
           />
         </div>
-
       </div>
-    </div >
+
+    </div>
   );
 };

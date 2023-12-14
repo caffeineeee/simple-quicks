@@ -42,7 +42,7 @@ export function TaskBox() {
     };
 
     return (
-        <div className='h-[734px] w-[737px] bottom-20 border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-5'>
+        <div className='h-[480px] w-[737px] mb-28 border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-5'>
             <div className="w-full h-full flex flex-col">
                 <span className='flex flex-row space-x-[379px]'>
                     <DropdownMenuRadioGroupDemo />

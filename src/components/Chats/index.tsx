@@ -31,7 +31,7 @@ export function ChatBox() {
     };
     return (
         <>
-            <div className='h-[734px] w-[737px] bottom-20 border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-5'>
+            <div className='h-[480px] w-[737px] mb-28 border-[1px] border-[solid] border-[#bdbdbd] bg-[#ffffff] px-[34px] py-5'>
                 <div className="w-full h-full flex flex-col">
 
                     <div className='w-[95%] mb-[2px] text-2xl'>
@@ -39,7 +39,7 @@ export function ChatBox() {
                             <div className='flex flex-row items-center pr-[59px]'>
                                 <TextField.Input
                                     placeholder="Search"
-                                    className='h-8 w-full pl-[59px]'
+                                    className='h-8 w-full pl-[59px] outline-none'
                                     autoFocus
                                     value={searchValue}
                                     onChange={onSearch}
