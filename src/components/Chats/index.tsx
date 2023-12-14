@@ -6,8 +6,8 @@ import { TextField } from "@radix-ui/themes";
 
 import { ChatsData, DUMMY_CHATS_DATA } from './data';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import { latoBold } from '@/app/layout';
+import { cn, latoBold } from '@/lib/utils';
+
 
 export function ChatBox() {
     const [searchValue, setSearchValue] = useState('');

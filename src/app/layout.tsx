@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
-import { Lato } from 'next/font/google';
 import '@/app/globals.css';
+import { latoRegular } from '@/lib/utils';
 
-export const latoRegular = Lato({ weight: "400", subsets: ['latin'] });
-export const latoBold = Lato({ weight: "700", subsets: ['latin'] });
-
-const metadata: Metadata = {
+export const metadata: Metadata = {
     title: 'Simple Quicks',
     description: 'Simple Quicks',
 };

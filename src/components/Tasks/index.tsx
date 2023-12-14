@@ -13,9 +13,8 @@ import {
     DropdownMenuContent,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { cn } from '@/lib/utils';
+import { cn, latoBold } from '@/lib/utils';
 import { DUMMY_TASKS_DATA } from './data';
-import { latoBold } from '@/app/layout';
 
 type ValuePiece = Date | null;
 
